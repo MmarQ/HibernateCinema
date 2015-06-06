@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">sok?ysyLofi1</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/kino</property>
+
+
+
+        <property name="connection_pool_size">1</property>
+
+        <property name="hbm2ddl.auto">do_nothing</property>
+
+        <property name="show_sql">true</property>
+		<!-- mapping files -->
+		<mapping resource="com/mmarq/data/Movie.hbm.xml" />
+		<mapping resource="com/mmarq/data/MovieType.hbm.xml" />
+		<mapping resource="com/mmarq/data/Relief.hbm.xml" />
+		<mapping resource="com/mmarq/data/Reservation.hbm.xml" />
+		<mapping resource="com/mmarq/data/Room.hbm.xml" />
+		<mapping resource="com/mmarq/data/Seance.hbm.xml" />
+		<mapping resource="com/mmarq/data/Ticket.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
