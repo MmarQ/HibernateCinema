@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.mmarq.data.Ticket" table="TICKET">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="row" type="int">
+            <column name="ROW" />
+        </property>
+        <property name="place" type="int">
+            <column name="PLACE" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="seanceId" type="int">
+            <column name="SEANCEID" />
+        </property>
+        <property name="ticketReductionId" type="int">
+            <column name="TICKETREDUCTIONID" />
+        </property>
+        <property name="ReservationId" type="int">
+            <column name="RESERVATIONID" />
+        </property>
+    </class>
+</hibernate-mapping>

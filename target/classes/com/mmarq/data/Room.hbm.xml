@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.mmarq.data.Room" table="ROOM">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="numberOfRows" type="int">
+            <column name="NUMBEROFROWS" />
+        </property>
+        <property name="numberOfPlacesInRow" type="int">
+            <column name="NUMBEROFPLACESINROW" />
+        </property>
+    </class>
+</hibernate-mapping>
