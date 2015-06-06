@@ -3,28 +3,28 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.mmarq.data.Ticket" table="TICKET">
+    <class name="com.mmarq.data.Ticket" table="bilety">
         <id name="id" type="int">
-            <column name="ID" />
+            <column name="id" />
             <generator class="assigned" />
         </id>
         <property name="row" type="int">
-            <column name="ROW" />
+            <column name="rzad" />
         </property>
         <property name="place" type="int">
-            <column name="PLACE" />
+            <column name="miejsce" />
         </property>
         <property name="price" type="double">
-            <column name="PRICE" />
+            <column name="cena" />
         </property>
         <property name="seanceId" type="int">
-            <column name="SEANCEID" />
+            <column name="id_seansu" />
         </property>
         <property name="ticketReductionId" type="int">
-            <column name="TICKETREDUCTIONID" />
+            <column name="id_ulgi" />
         </property>
         <property name="ReservationId" type="int">
-            <column name="RESERVATIONID" />
+            <column name="id_rezerwacji" />
         </property>
     </class>
 </hibernate-mapping>

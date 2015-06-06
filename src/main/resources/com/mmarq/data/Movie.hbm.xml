@@ -5,23 +5,23 @@
 <hibernate-mapping>
     <class name="com.mmarq.data.Movie" table="filmy">
         <id name="id" type="int">
-            <column name="ID" />
+            <column name="id" />
             <generator class="assigned" />
         </id>
         <property name="title" type="java.lang.String">
-            <column name="TITLE" />
+            <column name="tytul" />
         </property>
         <property name="director" type="java.lang.String">
-            <column name="DIRECTOR" />
+            <column name="rezyser" />
         </property>
         <property name="duration" type="int">
-            <column name="DURATION" />
+            <column name="czas_trwania" />
         </property>
         <property name="productionYear" type="int">
-            <column name="PRODUCTIONYEAR" />
+            <column name="rok_produkcji" />
         </property>
         <property name="movieTypeId" type="int">
-            <column name="MOVIETYPEID" />
+            <column name="id_gatunku" />
         </property>
     </class>
 </hibernate-mapping>

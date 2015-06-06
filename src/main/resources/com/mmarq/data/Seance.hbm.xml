@@ -3,19 +3,19 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.mmarq.data.Seance" table="SEANCE">
+    <class name="com.mmarq.data.Seance" table="seanse">
         <id name="id" type="int">
-            <column name="ID" />
+            <column name="id" />
             <generator class="assigned" />
         </id>
         <property name="movieId" type="int">
-            <column name="MOVIEID" />
+            <column name="id_filmu" />
         </property>
         <property name="roomId" type="int">
-            <column name="ROOMID" />
+            <column name="id_sali" />
         </property>
         <property name="date" type="java.sql.Timestamp">
-            <column name="DATE" />
+            <column name="data" />
         </property>
     </class>
 </hibernate-mapping>

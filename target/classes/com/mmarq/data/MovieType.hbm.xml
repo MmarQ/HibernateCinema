@@ -3,16 +3,16 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.mmarq.data.MovieType" table="MOVIETYPE">
+    <class name="com.mmarq.data.MovieType" table="gatunki">
         <id name="id" type="int">
-            <column name="ID" />
+            <column name="id" />
             <generator class="assigned" />
         </id>
         <property name="name" type="java.lang.String">
-            <column name="NAME" />
+            <column name="nazwa" />
         </property>
         <property name="ageRestriction" type="int">
-            <column name="AGERESTRICTION" />
+            <column name="ograniczenie_wiekowe" />
         </property>
     </class>
 </hibernate-mapping>

@@ -3,19 +3,19 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-06-06 14:01:39 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.mmarq.data.Reservation" table="RESERVATION">
+    <class name="com.mmarq.data.Reservation" table="rezerwacje">
         <id name="id" type="int">
-            <column name="ID" />
+            <column name="id" />
             <generator class="assigned" />
         </id>
         <property name="seanceId" type="int">
-            <column name="SEANCEID" />
+            <column name="id_seansu" />
         </property>
         <property name="row" type="int">
-            <column name="ROW" />
+            <column name="rzad" />
         </property>
         <property name="place" type="int">
-            <column name="PLACE" />
+            <column name="miejsce" />
         </property>
     </class>
 </hibernate-mapping>
