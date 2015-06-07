@@ -3,12 +3,12 @@ package com.mmarq.data;
 public class MovieType {
 	private int id;
 	private String name;
-	private int ageRestriction;
+	private Integer ageRestriction;
 
 	public MovieType() {
 	}
 
-	public MovieType(int id, String name, int ageRestriction) {
+	public MovieType(int id, String name, Integer ageRestriction) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -31,11 +31,11 @@ public class MovieType {
 		this.name = name;
 	}
 
-	public int getAgeRestriction() {
+	public Integer getAgeRestriction() {
 		return ageRestriction;
 	}
 
-	public void setAgeRestriction(int ageRestriction) {
+	public void setAgeRestriction(Integer ageRestriction) {
 		this.ageRestriction = ageRestriction;
 	}
 

@@ -6,13 +6,13 @@ public class Ticket{
 	private int place;
 	private double price;
 	private int seanceId;
-	private int ticketReductionId;
-	private int ReservationId;
+	private Integer ticketReductionId;
+	private Integer ReservationId;
 	
 	public Ticket(){
 	}
 	public Ticket(int id, int row, int place, double price, int seanceId,
-			int ticketReductionId, int reservationId) {
+			Integer ticketReductionId, Integer reservationId) {
 		super();
 		this.id = id;
 		this.row = row;
@@ -54,16 +54,16 @@ public class Ticket{
 	public void setSeanceId(int seanceId) {
 		this.seanceId = seanceId;
 	}
-	public int getTicketReductionId() {
+	public Integer getTicketReductionId() {
 		return ticketReductionId;
 	}
-	public void setTicketReductionId(int ticketReductionId) {
+	public void setTicketReductionId(Integer ticketReductionId) {
 		this.ticketReductionId = ticketReductionId;
 	}
-	public int getReservationId() {
+	public Integer getReservationId() {
 		return ReservationId;
 	}
-	public void setReservationId(int reservationId) {
+	public void setReservationId(Integer reservationId) {
 		ReservationId = reservationId;
 	}
 	@Override

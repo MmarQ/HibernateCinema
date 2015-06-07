@@ -2,12 +2,12 @@ package com.mmarq.data;
 
 public class Room{
 	private int id;
-	private int numberOfRows;
-	private int numberOfPlacesInRow;
+	private Integer numberOfRows;
+	private Integer numberOfPlacesInRow;
 
 	public Room(){
 	}
-	public Room(int id, int numberOfRows, int numberOfPlacesInRow) {
+	public Room(int id, Integer numberOfRows, Integer numberOfPlacesInRow) {
 		super();
 		this.id = id;
 		this.numberOfRows = numberOfRows;
@@ -21,16 +21,16 @@ public class Room{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNumberOfRows() {
+	public Integer getNumberOfRows() {
 		return numberOfRows;
 	}
-	public void setNumberOfRows(int numberOfRows) {
+	public void setNumberOfRows(Integer numberOfRows) {
 		this.numberOfRows = numberOfRows;
 	}
-	public int getNumberOfPlacesInRow() {
+	public Integer getNumberOfPlacesInRow() {
 		return numberOfPlacesInRow;
 	}
-	public void setNumberOfPlacesInRow(int numberOfPlacesInRow) {
+	public void setNumberOfPlacesInRow(Integer numberOfPlacesInRow) {
 		this.numberOfPlacesInRow = numberOfPlacesInRow;
 	}
 }

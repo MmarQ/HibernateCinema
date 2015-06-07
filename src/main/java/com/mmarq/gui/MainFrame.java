@@ -50,7 +50,7 @@ public class MainFrame extends JFrame {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							DisplayAllRecordsFrame frame = new DisplayAllRecordsFrame();
+							DisplayAllRecordsFrame frame = new DisplayAllRecordsFrame(false);
 							frame.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -61,5 +61,23 @@ public class MainFrame extends JFrame {
 		});
 		btnWywietl.setBounds(12, 215, 149, 25);
 		contentPane.add(btnWywietl);
+		
+		JButton btnUsu = new JButton("Usu\u0144");
+		btnUsu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							DisplayAllRecordsFrame frame = new DisplayAllRecordsFrame(true);
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
+		btnUsu.setBounds(12, 177, 149, 25);
+		contentPane.add(btnUsu);
 	}
 }
