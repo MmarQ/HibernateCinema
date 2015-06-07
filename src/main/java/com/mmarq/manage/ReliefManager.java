@@ -4,18 +4,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.mmarq.data.HibernateUtils;
-import com.mmarq.data.Movie;
+import com.mmarq.data.Relief;
 
-public class MovieManager implements Manager<Movie> {
+public class ReliefManager implements Manager<Relief> {
 	private Session session;
 	private SessionFactory sessionFactory;
 
-	public MovieManager() {
+	public ReliefManager() {
 		sessionFactory = HibernateUtils.getSessionFactory();
 	}
 
 	@Override
-	public void add(Movie record) {
+	public void add(Relief record) {
 		session = sessionFactory.openSession();
 		session.save(record);
 		session.getTransaction().commit();
@@ -25,23 +25,23 @@ public class MovieManager implements Manager<Movie> {
 
 	@Override
 	public void delete(int id) {
-		Movie movie = new Movie();
-		movie.setId(id);
+		Relief Relief = new Relief();
+		Relief.setId(id);
 		session = sessionFactory.openSession();
-		session.delete(movie);
+		session.delete(Relief);
 		session.close();
 	}
 
 	@Override
-	public Movie find(int id) {
+	public Relief find(int id) {
 		session = sessionFactory.openSession();
-		Movie movie = (Movie) session.get(Movie.class, id);
+		Relief Relief = (Relief) session.get(Relief.class, id);
 		session.close();
-		return movie;
+		return Relief;
 	}
 
 	@Override
-	public void update(Movie record) {
+	public void update(Relief record) {
 		session = sessionFactory.openSession();
 		session.update(record);
 		session.close();

@@ -4,18 +4,19 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.mmarq.data.HibernateUtils;
-import com.mmarq.data.Movie;
+import com.mmarq.data.Ticket;
 
-public class MovieManager implements Manager<Movie> {
+public class TicketManager implements Manager<Ticket>{
+
 	private Session session;
 	private SessionFactory sessionFactory;
 
-	public MovieManager() {
+	public TicketManager() {
 		sessionFactory = HibernateUtils.getSessionFactory();
 	}
 
 	@Override
-	public void add(Movie record) {
+	public void add(Ticket record) {
 		session = sessionFactory.openSession();
 		session.save(record);
 		session.getTransaction().commit();
@@ -25,7 +26,7 @@ public class MovieManager implements Manager<Movie> {
 
 	@Override
 	public void delete(int id) {
-		Movie movie = new Movie();
+		Ticket movie = new Ticket();
 		movie.setId(id);
 		session = sessionFactory.openSession();
 		session.delete(movie);
@@ -33,18 +34,17 @@ public class MovieManager implements Manager<Movie> {
 	}
 
 	@Override
-	public Movie find(int id) {
+	public Ticket find(int id) {
 		session = sessionFactory.openSession();
-		Movie movie = (Movie) session.get(Movie.class, id);
+		Ticket Ticket = (Ticket) session.get(Ticket.class, id);
 		session.close();
-		return movie;
+		return Ticket;
 	}
 
 	@Override
-	public void update(Movie record) {
+	public void update(Ticket record) {
 		session = sessionFactory.openSession();
 		session.update(record);
 		session.close();
 	}
-
 }

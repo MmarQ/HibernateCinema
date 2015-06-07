@@ -14,7 +14,10 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
 
 import com.mmarq.data.TableName;
+import com.mmarq.manage.Manager;
+import com.mmarq.manage.ManagerFactory;
 import com.mmarq.tablesModels.TableModel;
+
 import javax.swing.JButton;
 
 public class DisplayAllRecordsFrame extends JFrame {
@@ -60,6 +63,16 @@ public class DisplayAllRecordsFrame extends JFrame {
 		deleteRecordButton.setVisible(deleteButtonVisible);
 		deleteRecordButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				int row = allRecordsDisplayTable.getSelectedRow();
+				if(row == -1){
+					System.out.println("Oops");
+				}else{
+					int data = (int) allRecordsDisplayTable.getValueAt(row, 0);
+					Manager manager = ManagerFactory.getManager(TableName.fromString((String) tablesNamesComboBox.getSelectedItem()));
+					manager.delete(data);
+				}
+				
+				
 			}
 		});
 		deleteRecordButton.setBounds(285, 279, 165, 37);
